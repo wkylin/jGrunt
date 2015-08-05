@@ -1,0 +1,39 @@
+{
+  "name": "jGrunt",
+  "version": "0.0.0",
+  "description": "java grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wkylin/jGrunt.git"
+  },
+  "keywords": [
+    "java grunt"
+  ],
+  "author": "wkylin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wkylin/jGrunt/issues"
+  },
+  "homepage": "https://github.com/wkylin/jGrunt",
+  "dependencies": {
+    "grunt-cli": "0.1.13"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-csslint": "^0.3.1",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^0.6.0",
+    "time-grunt": "^1.2.0"
+  }
+}
