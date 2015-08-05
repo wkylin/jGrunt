@@ -1,5 +1,8 @@
 module.exports = function (grunt) {
 
+    require('load-grunt-tasks')(grunt);
+    require('time-grunt')(grunt);
+    
     // Project configuration.
     grunt.initConfig({
         uglify: {
@@ -13,13 +16,30 @@ module.exports = function (grunt) {
 
                 }]
             }
+        },
+        cssmin: {
+            build: {
+                options: {
+                    beautify: {
+                        ascii_only: true
+                    }
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'src/main/resources',
+                    src: ['public/css/**/*.css','!*.min.css'],
+                    dest: 'target/classes',
+                    ext: '.min.css'
+                }]
+            }
+        },
+        clean:{
+            js: ["target/classes/**/*.js", "!target/classes/**/*.min.js"],
+            css:["target/classes/**/*.css", "!target/classes/**/*.min.css"]
         }
     });
-
-    // Load the plugin that provides the "uglify" task.
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-
+    
     // Default task(s).
-    grunt.registerTask('default', ['uglify']);
+    grunt.registerTask('default', ['uglify', 'cssmin',"clean"]);
 
 };

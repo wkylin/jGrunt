@@ -1,0 +1,23 @@
+
+.ux-grid {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ux-grid p {
+    color: #2b81af;
+}
+
+.fn-clear {
+    zoom: 1;
+}
+
+.fn-clear:after {
+    font-size: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: ' ';
+}
+
