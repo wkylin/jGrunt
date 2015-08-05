@@ -59,11 +59,12 @@
                             <directory>.tmp</directory>
                         </fileset>
                         <!--<fileset>-->
-                            <!--<directory>node_modules</directory>-->
+                        <!--<directory>node_modules</directory>-->
                         <!--</fileset>-->
                     </filesets>
                 </configuration>
             </plugin>
+           
         </plugins>
     </build>
 </project>
