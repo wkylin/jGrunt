@@ -13,7 +13,6 @@ module.exports = function (grunt) {
                     src: 'public/js/**/*.js',
                     dest: "target/classes",
                     ext: '.min.js'
-
                 }]
             }
         },
@@ -36,10 +35,29 @@ module.exports = function (grunt) {
         clean:{
             js: ["target/classes/**/*.js", "!target/classes/**/*.min.js"],
             css:["target/classes/**/*.css", "!target/classes/**/*.min.css"]
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 8080,
+                    hostname: 'localhost',
+                    livereload: true
+                }
+            }
+        },
+        watch: {
+            options: {
+                livereload: true
+            },
+            css: {
+                files: ['src/main/resources/public/css/**/*.css'],
+                tasks: ['cssmin']
+            },
         }
+
     });
     
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'cssmin',"clean"]);
+    grunt.registerTask('default', ['uglify', 'cssmin','clean']);
 
 };
